@@ -46,3 +46,8 @@ Patches should be submitted to the ffmpeg-devel mailing list using
 avoided because they are not part of our review process and will be ignored.
 # FFMPEG_ANDROID
 开源ffmpeg集成到android
+
+# Config脚本----20191116
+android_build.sh及build_one.sh都能编译通过
+默认使用android_build.sh
+

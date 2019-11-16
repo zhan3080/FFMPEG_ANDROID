@@ -1,7 +1,7 @@
 export NDK=/Users/hzz/android-ndk-r14b
 export SYSROOT=$NDK/platforms/android-21/arch-arm
 export TOOLCHAIN=$NDK/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64
-CPU=armv7-a
+CPU=armeabi-v7a
 
 # 要保存动态库的目录，这里保存在源码根目录下的android/armv7-a
 export PREFIX=$(pwd)/android/$CPU
@@ -10,8 +10,8 @@ function build_android
 {
 ./configure --target-os=linux --prefix=$PREFIX \
     --enable-cross-compile \
-    --enable-shared \
-    --disable-static \
+    --disable-shared \
+    --enable-static \
     --disable-doc \
     --disable-ffmpeg \
     --disable-ffplay \
