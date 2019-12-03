@@ -49,5 +49,13 @@ avoided because they are not part of our review process and will be ignored.
 
 # Config脚本----20191116
 android_build.sh及build_one.sh都能编译通过
-默认使用android_build.sh
+20191130
+1、使用android_build.sh编译.a文件，把.a文件放到其他jni模块打包成一个so，编译报错（报错的是jni.h定义的变量找不到，很奇怪。不集成这些.a文件是能正常编译出jni的）
+2、如果把编译好的.a文件打包编译成一个单独so，再把so放到jni模块去编译，还是报步骤1的错
 
+3、androi_one.sh编译出来8个so文件，把这几个so文件及include目录拷贝到jni模块，编译没问题
+4、jni编译出来的8个so及jni生成的so放到android工程里运行也没问题
+
+20191203
+1、使用build_one.sh及buiold_one_a.sh编译出来的so都可用
+2、测试demo：https://github.com/zhan3080/FFmpegPlayer.git 
