@@ -16,7 +16,7 @@ build_one(){
 --cc=$PREBUILT/darwin-x86_64/bin/arm-linux-androideabi-gcc \
 --cross-prefix=$PREBUILT/darwin-x86_64/bin/arm-linux-androideabi- \
 --disable-stripping \
---nm=$PREBUILT/linux-x86_64/bin/arm-linux-androideabi-nm \
+--nm=$PREBUILT/darwin-x86_64/bin/arm-linux-androideabi-nm \
 --sysroot=$PLATFORM \
 --enable-gpl --enable-shared --disable-static --enable-small \
 --disable-ffprobe --disable-ffplay --disable-ffmpeg --disable-debug \
